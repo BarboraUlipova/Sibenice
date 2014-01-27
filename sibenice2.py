@@ -10,14 +10,14 @@ kontrola_spravne = False
 
 while kontrola_spravne == False: # nekonečný w. c. Zastaví se, až když bude splněna nějaká podmínka vevnitř
     pismeno = raw_input("Hadejte pismeno") # vždycky dávat raw_input. Neraw input přeloží vstup do pythoního kódu, takže by mazaný uživael mohl můj kód měnit.
-    
+
     if pismeno in string.ascii_lowercase and len(pismeno)==1: #kontroluje, aby uživatel zadal právě jedno písmeno (ne číslo a ne víc písmen). ascii_lowercase je preddefinovaný řetězec. "In" kontroluje, jestli je písmeno jeho podretezec
         if pismeno in slovo:
             #seznamp.append(pismeno)
             for i in range(len(slovo)):
                 if slovo[i]==pismeno:
                     spravne[i]=pismeno
-            print pismeno           
+            print pismeno
         else:
             if pismeno in spatne:
                 print "Opakujes se"
@@ -36,8 +36,6 @@ while kontrola_spravne == False: # nekonečný w. c. Zastaví se, až když bude
             kontrola_spravne = False
             break #ukonci while cyklus, pokud je 6 spatne zadanych cisel
             
-        
-            
         print " ".join(spravne)# spoji prvky seznamu do jednho stringu a oddeli je znakem v uvozovkach
         print " ".join(spatne)   
         
@@ -45,4 +43,3 @@ while kontrola_spravne == False: # nekonečný w. c. Zastaví se, až když bude
         print "musi to byt jedno pismeno"
 if kontrola_spravne == True:
     print "Vyhravas"
-
