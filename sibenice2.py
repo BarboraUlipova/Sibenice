@@ -7,7 +7,6 @@ print slovo
 spravne = ["_"]*len(slovo)
 spatne = []
 kontrola_spravne = False
-
 while kontrola_spravne == False: # nekonečný w. c. Zastaví se, až když bude splněna nějaká podmínka vevnitř
     pismeno = raw_input("Hadejte pismeno") # vždycky dávat raw_input. Neraw input přeloží vstup do pythoního kódu, takže by mazaný uživael mohl můj kód měnit.
 
